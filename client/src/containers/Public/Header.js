@@ -45,9 +45,7 @@ const Header = () => {
         <div className="flex items-center gap-1">
           {!isLoggedIn && (
             <div className="flex items-center gap-1">
-              <small className="text-gray-700">
-                CHIÊU HÙNG ROOMS & LIVING XIN CHÀO QUÝ KHÁCH HÀNG !
-              </small>
+              <small className="text-gray-700">XIN CHÀO QUÝ KHÁCH HÀNG !</small>
               <Button
                 text={"Đăng nhập"}
                 textColor="text-white"
