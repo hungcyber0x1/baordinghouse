@@ -17,22 +17,16 @@ const Header = () => {
   const headerRef = useRef();
   const { isLoggedIn } = useSelector((state) => state.auth);
   const [isShowMenu, setIsShowMenu] = useState(false);
-
-  const goLogin = useCallback(
-    (flag) => {
-      navigate(path.LOGIN, { state: { flag } });
-    },
-    [navigate]
-  );
-
+  const goLogin = useCallback((flag) => {
+    navigate(path.LOGIN, { state: { flag } });
+  }, []);
   useEffect(() => {
     headerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [searchParams.get("page")]);
 
   return (
-    <div ref={headerRef} className="w-3/5">
+    <div ref={headerRef} className="w-3/5 ">
       <div className="w-full flex items-center justify-between">
-        {/* Logo */}
         <Link to={"/"}>
           <img
             src={logo}
@@ -40,34 +34,31 @@ const Header = () => {
             className="w-[240px] h-[70px] object-contain"
           />
         </Link>
-
-        {/* Phần bên phải */}
         <div className="flex items-center gap-1">
           {!isLoggedIn && (
             <div className="flex items-center gap-1">
-              <small className="text-gray-700">XIN CHÀO QUÝ KHÁCH HÀNG !</small>
+              <small>TrọXịn xin chào!</small>
               <Button
                 text={"Đăng nhập"}
                 textColor="text-white"
-                bgColor="bg-[#FF3B30]" // 🔥 đỏ tươi
+                bgColor="bg-[#3961fb]"
                 onClick={() => goLogin(false)}
               />
               <Button
                 text={"Đăng ký"}
                 textColor="text-white"
-                bgColor="bg-[#FF3B30]" // 🔥 đỏ tươi
+                bgColor="bg-[#3961fb]"
                 onClick={() => goLogin(true)}
               />
             </div>
           )}
-
           {isLoggedIn && (
             <div className="flex items-center gap-3 relative">
               <User />
               <Button
                 text={"Quản lý tài khoản"}
                 textColor="text-white"
-                bgColor="bg-[#FF3B30]" // 🔥 đỏ tươi
+                bgColor="bg-blue-700"
                 px="px-4"
                 IcAfter={BsChevronDown}
                 onClick={() => setIsShowMenu((prev) => !prev)}
@@ -77,7 +68,7 @@ const Header = () => {
                   {menuManage.map((item) => {
                     return (
                       <Link
-                        className="hover:text-[#FF3B30] flex items-center gap-2 text-[#FF3B30] border-b border-gray-200 py-2"
+                        className="hover:text-orange-500 flex items-center gap-2 text-blue-600 border-b border-gray-200 py-2"
                         key={item.id}
                         to={item?.path}
                       >
@@ -87,7 +78,7 @@ const Header = () => {
                     );
                   })}
                   <span
-                    className="cursor-pointer hover:text-[#E00000] text-[#FF3B30] py-2 flex items-center gap-2"
+                    className="cursor-pointer hover:text-orange-500 text-blue-500 py-2 flex items-center gap-2"
                     onClick={() => {
                       setIsShowMenu(false);
                       dispatch(actions.logout());
@@ -100,12 +91,10 @@ const Header = () => {
               )}
             </div>
           )}
-
-          {/* Nút đăng tin mới */}
           <Button
             text={"Đăng tin mới"}
             textColor="text-white"
-            bgColor="bg-[#FF3B30]" // 🔥 đỏ tươi
+            bgColor="bg-secondary2"
             IcAfter={AiOutlinePlusCircle}
           />
         </div>

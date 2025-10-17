@@ -1,9 +1,9 @@
 export const text = {
-  title: "Tại sao lại chọn TrọXịn?",
+  title: "TrọXịn – Giúp chủ trọ dễ thở hơn?",
   description:
-    "Chúng tôi biết bạn có rất nhiều lựa chọn, nhưng TrọXịn tự hào là trang web đứng top google về các từ khóa: ",
+    "Trước đây, việc tìm người thuê khiến nhiều chủ trọ tốn công, tốn chi phí mà hiệu quả không cao. TrọXịn ra đời để thay đổi điều đó. ",
   description2:
-    "...Vì vậy tin của bạn đăng trên website sẽ tiếp cận được với nhiều khách hàng hơn, do đó giao dịch nhanh hơn, tiết kiệm chi phí hơn",
+    "Tin đăng của bạn được tối ưu SEO, hiển thị top Google và tiếp cận hàng trăm nghìn người tìm trọ mỗi ngày.",
   statistic: [
     {
       name: "Thành viên",
@@ -22,10 +22,10 @@ export const text = {
       value: "2.500.000+",
     },
   ],
-  price: "Chi phí thấp, hiệu quả tối đa",
+  price: "Đăng dễ – Có khách nhanh",
   comment:
-    '"Trước khi biết website TrọXịn, mình phải tốn nhiều công sức và chi phí cho việc đăng tin cho thuê: từ việc phát tờ rơi, dán giấy, và đăng lên các website khác nhưng hiệu quả không cao. Từ khi biết TrọXịn, mình đã thử đăng tin lên và đánh giá hiệu quả khá cao trong khi chi phí khá thấp, không còn tình trạng phòng trống kéo dài."',
-  author: "Anh Chiêu Hùng (chủ hệ thống phòng trọ tại Thành phố Hồ Chí Minh)",
-  question: "Bạn đang có phòng trọ / căn hộ cho thuê?",
-  answer: "Không phải lo tìm người cho thuê, phòng trống kéo dài",
+    '"Tôi đăng tin lên TrọXịn buổi sáng, đến chiều đã có người gọi thuê. Nhanh, dễ, tiện!"',
+  author: "Anh Hùng (chủ nhà trọ tại Bình Tân, TP.HCM)",
+  question: "Bạn còn đang lo phòng trống?",
+  answer: "TrọXịn sẽ giúp bạn lấp đầy ngay hôm nay!",
 };
